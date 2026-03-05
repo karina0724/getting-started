@@ -1,0 +1,21 @@
+name: Docker Echoes CI
+ 
+on: [push, pull_request, workflow_dispatch]
+jobs:
+  build-and-push:
+    name: Build and Push Image
+    runs-on: ubuntu-latest
+ 
+    steps:
+    - name: Source Checkout
+      uses: actions/checkout@v4
+ 
+    - name: Docker login
+      run:  echo "docker login -u...";
+    - name: Build Image
+      run: echo "docker build -t ...";
+ 
+    - name: TAg Image
+      run: echo "docker tag ...";
+    - name: Push Image
+      run: echo "docker push -- ...";    
